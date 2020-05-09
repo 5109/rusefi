@@ -1418,7 +1418,7 @@ void validateConfiguration(DECLARE_ENGINE_PARAMETER_SIGNATURE) {
 	}
 
 	for (int i = 0; i < INJECTION_PIN_COUNT;i++) {
-		CONFIG(injectionPins[i]) = fixTLE8888pinMREprior20200508(injectionPins[i]);
+		CONFIG(injectionPins[i]) = fixTLE8888pinMREprior20200508(CONFIG(injectionPins[i]));
 	}
 
 
