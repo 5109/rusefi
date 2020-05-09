@@ -29,6 +29,10 @@
 /* MC33972 pins go right after TLE6240 */
 #define MC33972_PIN(n)		((brain_pin_e)((int)BRAIN_PIN_LAST_ONCHIP + 1 + 16 + (n)))
 
+#if (BOARD_TLE8888_COUNT > 0)
+output_pin_e fixTLE8888pinMREprior20200508(output_pin_e pin);
+#endif // BOARD_TLE8888_COUNT
+
 void initSmartGpio(void);
 void startSmartCsPins(void);
 void stopSmartCsPins(void);
