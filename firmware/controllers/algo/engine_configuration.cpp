@@ -1417,7 +1417,12 @@ void validateConfiguration(DECLARE_ENGINE_PARAMETER_SIGNATURE) {
 		CONFIG(gppwm)[i].pin = fixTLE8888pinMREprior20200508(CONFIG(gppwm)[i].pin);
 	}
 
-#endif
+	for (int i = 0; i < INJECTION_PIN_COUNT;i++) {
+		CONFIG(injectionPins[i]) = fixTLE8888pinMREprior20200508(injectionPins[i]);
+	}
+
+
+#endif /* BOARD_TLE8888_COUNT */
 
 }
 
